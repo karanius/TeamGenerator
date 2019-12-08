@@ -7,6 +7,7 @@ const internTemp = require('./templates/intern.js');
 const Manager = require('./lib/Manager.js');
 const Engineer = require('./lib/Engineer.js');
 const Intern = require('./lib/Intern.js');
+const { printMsg } = require('./lib/printMsgs.js') ;
 
 const clear = () =>{
     console.clear();
@@ -15,94 +16,17 @@ const clear = () =>{
 const print = async (x) => {
     if (x === 'welcome') {
         clear('screen');
-        console.log(`
-    
-                By: Karanius
-                github: karanius
-    
-    
-        █░  █ ▄▀▀ █░  ▄▀▀▄ ▄▀▀▄ █▄ ▄█ ▄▀▀
-        █░  █ █░  █░  █░   █░ █ █▀▄▀█ █░
-        █   █ █▀▀ █   █░   █░ █ █ ▀ █ █▀▀
-        █▄█▄█ ▀▄▄ █▄█ ▀▄▄█ ▀▄▄▀ █░  █ ▀▄▄
-    
-    
-        
-        ~ Lets generate page for YOU and YOUR TEAM!
-    
-    
-    
-        `);
+        printMsg.welcome();
     } else if (x === 'bye'){
-        console.log(`
-
-
-            ~~ BYE!
-
-
-
-        `);
+        printMsg.bye();
     } else if (x === 'generating') {
         clear()
-        console.log(`
-
-        
-        By: Karanius      █████████
-        ░░███████░░░░░░░░░░███▒▒▒▒▒▒▒▒███
-        ░░█▒▒▒▒▒▒█░░░░░░░███▒▒▒▒▒▒▒▒▒▒▒▒▒███
-        ░░░█▒▒▒▒▒▒█░░░░██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
-        ░░░░█▒▒▒▒▒█░░░██▒▒▒▒▒██▒▒▒▒▒▒██▒▒▒▒▒███
-        ░░░░░█▒▒▒█░░░█▒▒▒▒▒▒████▒▒▒▒████▒▒▒▒▒▒██
-        ░░░█████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
-        ░░░█▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒██
-        ░██▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒██▒▒▒▒▒▒▒▒▒▒██▒▒▒▒██
-        ██▒▒▒███████████▒▒▒▒▒██▒▒▒▒▒▒▒▒██▒▒▒▒▒██
-        █▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒████████▒▒▒▒▒▒▒██
-        ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
-        ░█▒▒▒███████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
-        ░██▒▒▒▒▒▒▒▒▒▒████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
-        ░░████████████░░░█████████████████
-               
-                    
-        █░  █▀▀█ █▀▀█ █▀▀▄ ░▀░ █▀▀▄ █▀▀▀   ░   ░   ░
-        █░  █░░█ █▄▄█ █░░█ ▀█▀ █░░█ █░▀█   ▄   ▄   ▄
-        ▀▀▀ ▀▀▀▀ ▀░░▀ ▀▀▀░ ▀▀▀ ▀░░▀ ▀▀▀▀   █   █   █
-        
-        
-        `)
+        printMsg.generating()
     } else if ( x === 'error') {
-        console.log(' ~~~~~~~~~Error?  ');
+        printMsg.error();
     } else if ( x === 'done' ){
-        console.log(`
-
-        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-        ░░░░░░░░░░░░░▄▄▄▄▄▄▄░░░░░░░░░
-        ░░░░░░░░░▄▀▀▀░░░░░░░▀▄░░░░░░░
-        ░░░░░░░▄▀░░░░░░░░░░░░▀▄░░░░░░
-        ░░░░░░▄▀░░░░░░░░░░▄▀▀▄▀▄░░░░░
-        ░░░░▄▀░░░░░░░░░░▄▀░░██▄▀▄░░░░
-        ░░░▄▀░░▄▀▀▀▄░░░░█░░░▀▀░█▀▄░░░
-        ░░░█░░█▄▄░░░█░░░▀▄░░░░░▐░█░░░
-        ░░▐▌░░█▀▀░░▄▀░░░░░▀▄▄▄▄▀░░█░░
-        ░░▐▌░░█░░░▄▀░░░░░░░░░░░░░░█░░
-        ░░▐▌░░░▀▀▀░░░░░░░░░░░░░░░░▐▌░
-        ░░▐▌░░░░░░░░░░░░░░░▄░░░░░░▐▌░
-        ░░▐▌░░░░░░░░░▄░░░░░█░░░░░░▐▌░
-        ░░░█░░░░░░░░░▀█▄░░▄█░░░░░░▐▌░
-        ░░░▐▌░░░░░░░░░░▀▀▀▀░░░░░░░▐▌░
-        ░░░░█░░░░░░░░░░░░░░░░░░░░░█░░
-        ░░░░▐▌▀▄░░░░░░░░░░░░░░░░░▐▌░░
-        ░░░░░█░░▀░░░░░░░░░░░░░░░░▀░░░
-        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-
-                        Done....
-                            github: karanius
-        
-        `)      
+        printMsg.done()   
     }
-
-
 };
 
 const ask = async (stage , nOfEmployee) => { 
@@ -200,7 +124,6 @@ const ask = async (stage , nOfEmployee) => {
             console.log('///////////////',error);
         }
     )
-
 };
 
 const askQuestions = async () => {
@@ -240,36 +163,32 @@ const askQuestions = async () => {
     };
 };
 
-const generatePge = (teamData) =>{
+const injectData = async (template , employee) => {
+    let temp = template
+    temp = await temp.replace(/{{fullName}}/, await employee.getName());
+    temp = await temp.replace(/{{role}}/, await employee.getRole());
+    temp = await temp.replace(/{{id}}/, await employee.getID());
+    temp = await temp.replace(/{{eMail}}/, await employee.getEmail());
+    return temp;
+}
+
+const generatePge = async (teamData) =>{
     let index = mainPage;
     let memberArr = []
     for (let i of teamData){
-        let role = i.getRole();
-        
-        if (role === 'Manager'){
-            let man = managerTemp;
-            man = man.replace(/{{fullName}}/, i.getName());
-            man = man.replace(/{{role}}/, role);
-            man = man.replace(/{{id}}/, i.getID());
-            man = man.replace(/{{eMail}}/, i.getEmail());
-            man = man.replace(/{{officeNumber}}/, i.getOfficeNumber());
-            memberArr.push(man)
-        }else if (role === 'Engineer') {
-            let eng = engineerTemp;
-            eng = eng.replace(/{{fullName}}/, i.getName());
-            eng = eng.replace(/{{role}}/, role);
-            eng = eng.replace(/{{id}}/, i.getID());
-            eng = eng.replace(/{{eMail}}/, i.getEmail());
-            eng = eng.replace(/{{githubAccount}}/, i.getGithub());
-            memberArr.push(eng)
-        } else if ( role === 'Intern') {
-            let int = internTemp;
-            int = int.replace(/{{fullName}}/, i.getName());
-            int = int.replace(/{{role}}/, role);
-            int = int.replace(/{{id}}/, i.getID());
-            int = int.replace(/{{eMail}}/, i.getEmail());
-            int = int.replace(/{{school}}/, i.getSchool());
-            memberArr.push(int)
+        let temp = '';
+        if (await i.getRole() === 'Manager'){
+            temp = await injectData(managerTemp , i);
+            temp = temp.replace(/{{officeNumber}}/, await i.getOfficeNumber());
+            memberArr.push(temp)
+        }else if (await i.getRole() === 'Engineer') {
+            temp = await injectData(engineerTemp , i);
+            temp = temp.replace(/{{githubAccount}}/, i.getGithub());
+            memberArr.push(temp)
+        } else if ( await i.getRole() === 'Intern') {
+            temp = await injectData(internTemp , i);
+            temp = temp.replace(/{{school}}/, i.getSchool());
+            memberArr.push(temp)
         }
     }
     let text = '';
@@ -311,5 +230,5 @@ const init = async () => {
     }
 };
 
-
+// inputHasGlitch ? ( go to node_modules/inquirer/lib/prompts/input.js - line: 94 && replaceLineWith => { this.rl.line += ''; } )  : have fun;
 init();
