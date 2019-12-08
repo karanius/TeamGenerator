@@ -1,1 +1,3 @@
 # TeamGenerator
+
+![](screenShot.png)
