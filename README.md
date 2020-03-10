@@ -106,12 +106,3 @@ The project must generate a `team.html` page in the `output` directory, that dis
 * Below is an example of what your application may look like. Remember, the styling is completely up to you so try to make it unique.
 
 From the `package.json`, make sure to `npm install`.
-
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL of the GitHub repository
-
-* **Optional**: GIF of your CLI applications functionality
