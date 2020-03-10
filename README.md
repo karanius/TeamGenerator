@@ -105,7 +105,7 @@ The project must generate a `team.html` page in the `output` directory, that dis
 
 * Below is an example of what your application may look like. Remember, the styling is completely up to you so try to make it unique.
 
-In the `Develop` folder, there is a `package.json`, so make sure to `npm install`.
+From the `package.json`, make sure to `npm install`.
 
 
 ## Submission on BCS
