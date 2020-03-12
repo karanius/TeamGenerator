@@ -4,19 +4,18 @@ A software engineering team generator command line application
 
 ## Table of Contents
 
-1. [About](#about)
-1. [Business Context](#business-context)
-1. [Minimum Requirements](#minimum-requirements)
-1. [Classes](#classes)
-1. [User Input](#user-input)
-1. [Roster Output](#roster-output)
-1. [Submission](#submission)
-1. [Development Strategy](#development-strategy)
-1. [Built With](#built-with)
-1. [Demo](#demo)
-1. [Getting Started](#getting-started)
+- [UofT Full-Stack Web Development Bootcamp Project #8: Template Engine - Team Generator](#uoft-full-stack-web-development-bootcamp-project-8-template-engine---team-generator)
+  - [Table of Contents](#table-of-contents)
+  - [About](#about)
+  - [Business Context](#business-context)
+  - [Minimum Requirements](#minimum-requirements)
+    - [Classes](#classes)
+    - [User Input](#user-input)
+    - [Roster Output](#roster-output)
+  - [Development Strategy](#development-strategy)
 
-![](screenShot.png)
+![](screenShot1.png)
+
 
 ## About
 
@@ -29,6 +28,9 @@ As a manager
 I want to generate a webpage that displays my team's basic info
 so that I have quick access to emails and GitHub profiles
 ```
+
+![](screenShot.png)
+
 
 ## Minimum Requirements
 
