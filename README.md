@@ -14,7 +14,7 @@ A software engineering team generator command line application
     - [Roster Output](#roster-output)
   - [Development Strategy](#development-strategy)
 
-![](screenShot1.png)
+![](screenShot1.gif)
 
 
 ## About
